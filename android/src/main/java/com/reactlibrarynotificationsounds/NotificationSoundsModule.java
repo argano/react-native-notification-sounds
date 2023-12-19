@@ -82,6 +82,7 @@ public class NotificationSoundsModule extends ReactContextBaseJavaModule {
             }
             if (thePlayer != null) thePlayer.stop();
             thePlayer = MediaPlayer.create(this.reactContext, notification);
+            thePlayer.setLooping(true);
             thePlayer.start();
         } catch (Exception e) {
             e.printStackTrace();
